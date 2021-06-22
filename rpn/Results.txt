@@ -1,0 +1,124 @@
+
+(Token: 2 ) 		push 2
+(Token: 4 ) 		push 4
+(Token: * ) 		pop  2		Pop 4		Push 8
+(Token: 5 ) 		push 5
+(Token: + ) 		pop  8		Pop 5		Push 13
+(Token: ; ) 		Pop  13
+				Valid: result = 13
+
+
+(Token: 13 ) 		push 13
+(Token: 5 ) 		push 5
+(Token: % ) 		pop  13		Pop 5		Push 3
+(Token: 5 ) 		push 5
+(Token: + ) 		pop  3		Pop 5		Push 8
+(Token: ; ) 		Pop  8
+				Valid: result = 8
+
+
+(Token: 15 ) 		push 15
+(Token: 1 ) 		push 1
+(Token: + ) 		pop  15		Pop 1		Push 16
+(Token: 2 ) 		push 2
+(Token: / ) 		pop  16		Pop 2		Push 8
+(Token: 1 ) 		push 1
+(Token: - ) 		pop  8		Pop 1		Push 7
+(Token: ; ) 		Pop  7
+				Valid: result = 7
+
+
+(Token: 15 ) 		push 15
+(Token: + ) 		
+(Token: 1 ) 		
+(Token: + ) 		
+(Token: 2 ) 		
+(Token: / ) 		
+(Token: 1 ) 		
+(Token: - ) 		
+(Token: ; ) 		
+				Invalid RPN expression - not enough operands
+
+(Token: 3 ) 		push 3
+(Token: 4 ) 		push 4
+(Token: + ) 		pop  3		Pop 4		Push 7
+(Token: 15 ) 		push 15
+(Token: 10 ) 		push 10
+(Token: - ) 		pop  15		Pop 10		Push 5
+(Token: * ) 		pop  7		Pop 5		Push 35
+(Token: ; ) 		Pop  35
+				Valid: result = 35
+
+
+(Token: 3 ) 		push 3
+(Token: 4 ) 		push 4
+(Token: + ) 		pop  3		Pop 4		Push 7
+(Token: 6 ) 		push 6
+(Token: 15 ) 		push 15
+(Token: 10 ) 		push 10
+(Token: - ) 		pop  15		Pop 10		Push 5
+(Token: * ) 		pop  6		Pop 5		Push 30
+(Token: ; ) 		
+				Invalid RPN expression - too many operands
+
+(Token: 2 ) 		push 2
+(Token: 13 ) 		push 13
+(Token: + ) 		pop  2		Pop 13		Push 15
+(Token: 14 ) 		push 14
+(Token: 6 ) 		push 6
+(Token: - ) 		pop  14		Pop 6		Push 8
+(Token: - ) 		pop  15		Pop 8		Push 7
+(Token: 5 ) 		push 5
+(Token: * ) 		pop  7		Pop 5		Push 35
+(Token: 4 ) 		push 4
+(Token: + ) 		pop  35		Pop 4		Push 39
+(Token: ; ) 		Pop  39
+				Valid: result = 39
+
+
+(Token: 35 ) 		push 35
+(Token: 6 ) 		push 6
+(Token: 4 ) 		push 4
+(Token: 2 ) 		push 2
+(Token: 2 ) 		push 2
+(Token: / ) 		pop  2		Pop 2		Push 1
+(Token: + ) 		pop  4		Pop 1		Push 5
+(Token: * ) 		pop  6		Pop 5		Push 30
+(Token: - ) 		pop  35		Pop 30		Push 5
+(Token: ; ) 		Pop  5
+				Valid: result = 5
+
+
+(Token: 3 ) 		push 3
+(Token: 4 ) 		push 4
+(Token: + ) 		pop  3		Pop 4		Push 7
+(Token: 1 ) 		push 1
+(Token: 2 ) 		push 2
+(Token: - ) 		pop  1		Pop 2		Push -1
+(Token: * ) 		pop  7		Pop -1		Push -7
+(Token: 4 ) 		push 4
+(Token: 2 ) 		push 2
+(Token: / ) 		pop  4		Pop 2		Push 2
+(Token: 3 ) 		push 3
+(Token: - ) 		pop  2		Pop 3		Push -1
+(Token: + ) 		pop  -7		Pop -1		Push -8
+(Token: ; ) 		Pop  -8
+				Valid: result = -8
+
+
+(Token: 3 ) 		push 3
+(Token: 14 ) 		push 14
+(Token: 1 ) 		push 1
+(Token: 2 ) 		push 2
+(Token: 4 ) 		push 4
+(Token: 2 ) 		push 2
+(Token: 3 ) 		push 3
+(Token: + ) 		pop  2		Pop 3		Push 5
+(Token: % ) 		pop  4		Pop 5		Push 4
+(Token: * ) 		pop  2		Pop 4		Push 8
+(Token: + ) 		pop  1		Pop 8		Push 9
+(Token: - ) 		pop  14		Pop 9		Push 5
+(Token: + ) 		pop  3		Pop 5		Push 8
+(Token: ; ) 		Pop  8
+				Valid: result = 8
+

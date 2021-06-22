@@ -1,0 +1,26 @@
+//****************************************************************************************************
+//
+//		File:					assumptions.txt
+//		
+//		Student:				Bently Sengrath
+//
+//		Assignment:	 			Program  # 13
+//
+//		Course Name:			Data Structures   I 
+//
+//		Course Number:			COSC 3050 - 01
+//
+//		Due:					Dec 16, 2019
+//
+//
+//		This text file will make assumptions based on customer behaviour.
+//		 
+//		
+//****************************************************************************************************
+
+
+Once customer is queued in a line. Customer cannot switch lines.
+Customers goes to the shortest intial line when they want to enter the line.
+Customers cannot leave the line and re-enter the line at the same location.
+Customers cannot cut in between lines to get a better spot.
+No self-check customers can use.
